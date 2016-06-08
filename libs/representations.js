@@ -18,7 +18,7 @@ var updateParticipant = {
 
 
 var createSession = {
-  "session_name": optionalString
+  "session_name": optionalString,
   "start_time": optionalString,
   "end_time": "string",
   "picture": "string",
@@ -26,7 +26,7 @@ var createSession = {
 };
 
 
-var sessionUpdate = {
+var updateSession = {
   "session_name": optionalString,
   "start_time": optionalString,
   "end_time": optionalString,

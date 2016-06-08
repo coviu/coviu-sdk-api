@@ -22,7 +22,7 @@ var createSession = {
   "start_time": optionalString,
   "end_time": "string",
   "picture": "string",
-  "participants": {__array: createParticipant}
+  "participants": {__optional: {__array: createParticipant}}
 };
 
 

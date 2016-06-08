@@ -11,15 +11,15 @@ module.exports = function(service) {
     /*
      * Create a new session
      * @param: session  - {
-     *  "session_name": [optional display name for the session]
-     *  "start_time": [date string],
-     *  "end_time": [date string],
-     *  "picture": [optional url for room image],
+     *  "session_name": optional display name for the session
+     *  "start_time": utc date string,
+     *  "end_time": utc date string,
+     *  "picture": optional url for room image,
      *  "participants": [{
-     *    "display_name": [optional string for entry display name],
-     *    "picture": [option url for participant avatar],
-     *    "role": [*required* - "guest", or "host"],
-     *    "state": [option content for client use]
+     *    "display_name": optional string for participant display name,
+     *    "picture": option url for participant avatar,
+     *    "role": *required* - "guest", or "host",
+     *    "state": option content for client use
      *   }, ...]
      * }
      */

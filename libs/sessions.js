@@ -131,7 +131,7 @@ module.exports = function(service) {
      * @param: particpantId - string, the id of the participant
      */
     deleteParticipant: function(participantId) {
-      del.path('/participants/').subpath(participantId);
+      return del.path('/participants/').subpath(participantId);
     }
   };
 };

@@ -1,0 +1,8 @@
+{
+  "name": "coviu-sdk-api",
+  "version": "0.1.0",
+  "description": "Interface methods for the coviu api.",
+  "main": "index.js",
+  "author": "Briely Marum <brielymarum@gmail.com>",
+  "license": "ISC"
+}

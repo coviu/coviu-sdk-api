@@ -99,7 +99,7 @@ module.exports = function(service) {
       return post.path('/sessions/').subpath(sessionId)
       .subpath('/participants')
       .bodyShape(representations.createParticipantRequest)
-      .body(body);
+      .body(participant);
     },
 
     /*

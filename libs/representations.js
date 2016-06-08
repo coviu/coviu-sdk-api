@@ -27,10 +27,10 @@ var createSession = {
 
 
 var sessionUpdate = {
-  "session_name": optionalString
+  "session_name": optionalString,
   "start_time": optionalString,
   "end_time": optionalString,
-  "picture": optionalString,
+  "picture": optionalString
 };
 
 var getSessionPageQuery = {

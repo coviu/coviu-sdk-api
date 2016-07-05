@@ -1,6 +1,7 @@
 // The expted shape for representation using for validatieon by the shapeful library.
 var optionalString = {__optional: 'string'};
 var optionalNumber = {__optional: 'number'};
+var optionalBoolean = {__optional: 'boolean'};
 
 var createParticipant = {
   "display_name": optionalString,
@@ -37,7 +38,8 @@ var getSessionPageQuery = {
   "page": optionalNumber,
   "page_size": optionalNumber,
   "start_time": optionalString,
-  "end_time": optionalString
+  "end_time": optionalString,
+  "include_canceled": optionalBoolean
 };
 
 module.exports = {

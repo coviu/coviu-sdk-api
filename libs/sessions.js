@@ -44,6 +44,7 @@ module.exports = function(service) {
      *    "page_size": optional number,
      *    "start_time": optional utc date string,
      *    "end_time": optional utc date string
+     *    "include_canceled": optional boolean
      *  }
      */
     getSessions: function(query) {
@@ -70,9 +71,18 @@ module.exports = function(service) {
 
     /*
      * Cancel a session
+     * DEPRECATED: use cancelSession.
      * @param: sessionId - string
      */
     deleteSession: function(sessionId) {
+      return del.path('/sessions/').subpath(sessionId);
+    },
+
+    /*
+     * Cancel a session
+     * @param: sessionId - string
+     */
+    cancelSession: function(sessionId) {
       return del.path('/sessions/').subpath(sessionId);
     },
 

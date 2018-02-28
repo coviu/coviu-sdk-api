@@ -4,5 +4,8 @@
   "description": "Interface methods for the coviu api.",
   "main": "index.js",
   "author": "Briely Marum <brielymarum@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "flow-bin": "^0.51.0"
+  }
 }

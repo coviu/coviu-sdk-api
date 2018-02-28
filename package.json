@@ -1,5 +1,5 @@
 {
-  "name": "coviu-sdk-api",
+  "name": "@coviu/coviu-sdk-api",
   "version": "0.1.8",
   "description": "Interface methods for the coviu api.",
   "main": "index.js",

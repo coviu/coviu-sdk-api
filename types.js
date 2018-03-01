@@ -95,18 +95,20 @@ export type CallSession = {|
   +participants: Array<CallParticipant>
 |};
 
+export type SessionsAPI = {|
+  addParticipant: (sessionId: string, participant: NewParticipant) => Runnable<CallParticipant>,
+  cancelSession: (sessionId: string) => Runnable<any>,
+  createSession: (SessionCreate) => Runnable<?CallSession>,
+  deleteParticipant: (participantId: string) => Runnable<any>,
+  deleteSession: (sessionId: string) => Runnable<?any>,
+  getParticipant: (participantId: string) => Runnable<CallParticipant>,
+  getSession: (sessionId: string) => Runnable<CallSession>,
+  getSessionParticipants: (sessionId: string) => Runnable<Array<CallParticipant>>,
+  getSessions: (query: SessionPageQuery) => Runnable<PagedResponse<CallSession>>,
+  updateParticipant: (participantId: string, update: UpdateParticipant) => Runnable<CallParticipant>,
+  updateSession: (sessionId: string, update: SessionUpdate) => Runnable<CallSession>,
+|};
+
 export type CoviuClientSDK = {|
-  sessions: {
-    addParticipant: (sessionId: string, participant: NewParticipant) => Runnable<CallParticipant>,
-    cancelSession: (sessionId: string) => Runnable<any>,
-    createSession: (SessionCreate) => Runnable<?CallSession>,
-    deleteParticipant: (participantId: string) => Runnable<any>,
-    deleteSession: (sessionId: string) => Runnable<?any>,
-    getParticipant: (participantId: string) => Runnable<CallParticipant>,
-    getSession: (sessionId: string) => Runnable<CallSession>,
-    getSessionParticipants: (sessionId: string) => Runnable<Array<CallParticipant>>,
-    getSessions: (query: SessionPageQuery) => Runnable<PagedResponse<CallSession>>,
-    updateParticipant: (participantId: string, update: UpdateParticipant) => Runnable<CallParticipant>,
-    updateSession: (sessionId: string, update: SessionUpdate) => Runnable<CallSession>,
-  }
+  sessions: SessionsAPI
 |};

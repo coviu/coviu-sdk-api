@@ -95,7 +95,7 @@ export type CallSession = {|
   +participants: Array<CallParticipant>
 |};
 
-export type SessionsAPI = {|
+export type SessionsAPI = {
   addParticipant: (sessionId: string, participant: NewParticipant) => Runnable<CallParticipant>,
   cancelSession: (sessionId: string) => Runnable<any>,
   createSession: (SessionCreate) => Runnable<?CallSession>,
@@ -107,7 +107,7 @@ export type SessionsAPI = {|
   getSessions: (query: SessionPageQuery) => Runnable<PagedResponse<CallSession>>,
   updateParticipant: (participantId: string, update: UpdateParticipant) => Runnable<CallParticipant>,
   updateSession: (sessionId: string, update: SessionUpdate) => Runnable<CallSession>,
-|};
+};
 
 export type CoviuClientSDK = {|
   sessions: SessionsAPI

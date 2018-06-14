@@ -92,7 +92,8 @@ export type CallSession = {|
   +picture: ?string,
   +team_id: string,
   +client_id: string,
-  +participants: ?Array<CallParticipant>
+  +participants: ?Array<CallParticipant>,
+  +feature_flags: ?Array<string>
 |};
 
 export type SessionsAPI = {

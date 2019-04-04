@@ -5,7 +5,7 @@ export type Runnable<T> = {
   run: () => Promise<?T>
 };
 
-export type ParticipantRole = 'HOST' | 'GUEST';
+export type ParticipantRole = 'HOST' | 'GUEST' | 'PARTICIPANT';
 
 // Defines the options for new participants
 export type NewParticipant = {

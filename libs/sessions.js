@@ -7,7 +7,6 @@ module.exports = function(service) {
   var del = service.del();
 
   return {
-
     /*
      * Create a new session
      * @param: session  - {
